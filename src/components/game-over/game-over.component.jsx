@@ -5,7 +5,7 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import "./game-over.styles.css";
 
-const GameOver = ({ history, setGameOver }) => {
+const GameOver = ({ history, setGameOver, getData }) => {
   return (
     <div className="game-over">
       <div className="game-over-content">
@@ -14,7 +14,7 @@ const GameOver = ({ history, setGameOver }) => {
           small
           onClick={() => {
             setGameOver(false);
-            history.push("/game/1");
+            getData(history);
           }}
         >
           &#8635;
